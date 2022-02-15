@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HomeworkCpp_09_b", "Homewor
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MenuLib", "MenuLib\MenuLib.vcxproj", "{61C0154D-FD97-4E42-A1A7-2A482764833B}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ConvertLib", "ConvertLib\ConvertLib.vcxproj", "{40613AE6-7ACD-43EB-A41F-D205B2294616}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,6 +33,14 @@ Global
 		{61C0154D-FD97-4E42-A1A7-2A482764833B}.Release|x64.Build.0 = Release|x64
 		{61C0154D-FD97-4E42-A1A7-2A482764833B}.Release|x86.ActiveCfg = Release|Win32
 		{61C0154D-FD97-4E42-A1A7-2A482764833B}.Release|x86.Build.0 = Release|Win32
+		{40613AE6-7ACD-43EB-A41F-D205B2294616}.Debug|x64.ActiveCfg = Debug|x64
+		{40613AE6-7ACD-43EB-A41F-D205B2294616}.Debug|x64.Build.0 = Debug|x64
+		{40613AE6-7ACD-43EB-A41F-D205B2294616}.Debug|x86.ActiveCfg = Debug|Win32
+		{40613AE6-7ACD-43EB-A41F-D205B2294616}.Debug|x86.Build.0 = Debug|Win32
+		{40613AE6-7ACD-43EB-A41F-D205B2294616}.Release|x64.ActiveCfg = Release|x64
+		{40613AE6-7ACD-43EB-A41F-D205B2294616}.Release|x64.Build.0 = Release|x64
+		{40613AE6-7ACD-43EB-A41F-D205B2294616}.Release|x86.ActiveCfg = Release|Win32
+		{40613AE6-7ACD-43EB-A41F-D205B2294616}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

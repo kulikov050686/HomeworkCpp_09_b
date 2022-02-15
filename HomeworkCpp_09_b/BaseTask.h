@@ -9,6 +9,9 @@ class BaseTask
 {
 protected:
 
+	/// <summary>
+	/// Конструктор
+	/// </summary>
 	BaseTask() = default;
 
 	/// <summary>
