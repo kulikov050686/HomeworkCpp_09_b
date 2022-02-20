@@ -146,9 +146,6 @@
     <ClInclude Include="HomeWork.h" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ConvertLib\ConvertLib.vcxproj">
-      <Project>{40613ae6-7acd-43eb-a41f-d205b2294616}</Project>
-    </ProjectReference>
     <ProjectReference Include="..\MenuLib\MenuLib.vcxproj">
       <Project>{61c0154d-fd97-4e42-a1a7-2a482764833b}</Project>
     </ProjectReference>

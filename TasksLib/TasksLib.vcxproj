@@ -173,6 +173,11 @@
     <ClCompile Include="Task4.cpp" />
     <ClCompile Include="Task5.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ConvertLib\ConvertLib.vcxproj">
+      <Project>{40613ae6-7acd-43eb-a41f-d205b2294616}</Project>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
