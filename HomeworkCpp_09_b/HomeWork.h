@@ -2,20 +2,30 @@
 #include <iostream>
 #include <random>
 #include <vector>
-#include "Tasks.h"
+#include <memory>
 #include "../MenuLib/MenuController.h"
+#include "../TasksLib/TasksLocator.h"
 
 class HomeWork
 {
 public:
 
+	/// <summary>
+	/// Конструктор
+	/// </summary>
 	HomeWork() = default;
 
 	/// <summary>
-	/// Запуск
+	/// Запустить
 	/// </summary>
-	void Run();
+	void Run(std::shared_ptr<IMenuController> menuController,
+			 std::shared_ptr<TasksLocator> taskLocator);
 
+	/// <summary>
+	/// Деструктор
+	/// </summary>
+	virtual ~HomeWork() = default;
+	
 private:
 
 	/// <summary>

@@ -1,3 +1,4 @@
+#include "pch.h"
 #include "Task5.h"
 
 void Task5::Run()
@@ -113,4 +114,22 @@ bool Task5::Victory(const std::string* str, const char chr)
 	}
 
 	return false;
+}
+
+std::string Task5::RemoveSpaces(std::string str)
+{
+	str.erase(std::remove(str.begin(), str.end(), ' '), str.end());
+	return str;
+}
+
+int Task5::NumberOfSymbols(const std::string str, const char chr)
+{
+	int k = 0;
+
+	for (int i = 0; i < str.length(); i++)
+	{
+		if (str[i] == chr) k++;
+	}
+
+	return k;
 }

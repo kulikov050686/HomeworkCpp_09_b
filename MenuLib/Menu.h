@@ -1,11 +1,12 @@
 #pragma once
 #include <string>
 #include <vector>
+#include "IMenu.h"
 
 /// <summary>
 /// Класс меню
 /// </summary>
-class Menu
+class Menu : public IMenu
 {
 private:
 
@@ -15,9 +16,9 @@ private:
 	int _sizeMenu = 0;
 
 	/// <summary>
-	/// Название пунктов меню
+	/// Названия пунктов меню
 	/// </summary>
-	std::string* _itemsName = nullptr;
+	std::vector<std::string> _itemsName;
 
 	/// <summary>
 	/// Запрет копировария
@@ -41,10 +42,15 @@ public:
 	/// Получить название пункта меню по номеру
 	/// </summary>
 	/// <param name="menuItemNumber"> Номер пункта меню </param>	
-	std::string GetItemMenu(int menuItemNumber);
-		
+	std::string GetItemMenu(int menuItemNumber) override;
+
+	/// <summary>
+	/// Количество пунктов меню
+	/// </summary>	
+	int GetSizeMenu() override;
+
 	/// <summary>
 	/// Деструктор
 	/// </summary>
-	~Menu();
+	virtual ~Menu() = default;
 };

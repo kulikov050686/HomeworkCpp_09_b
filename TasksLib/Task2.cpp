@@ -1,3 +1,4 @@
+#include "pch.h"
 #include "Task2.h"
 
 void Task2::Run()
@@ -130,4 +131,16 @@ bool Task2::ValidCharacterSecondPart(char chr)
 	}
 
 	return false;
+}
+
+int Task2::NumberOfSymbols(const std::string str, const char chr)
+{
+	int k = 0;
+
+	for (int i = 0; i < str.length(); i++)
+	{
+		if (str[i] == chr) k++;
+	}
+
+	return k;
 }

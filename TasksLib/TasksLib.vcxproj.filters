@@ -18,30 +18,45 @@
     <ClInclude Include="pch.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="Menu.h">
+    <ClInclude Include="ITask.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="MenuController.h">
+    <ClInclude Include="Task1.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="IMenuController.h">
+    <ClInclude Include="Task2.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="IMenu.h">
+    <ClInclude Include="TasksLocator.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="Task5.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="Task4.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="Task3.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="MenuLib.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
     <ClCompile Include="pch.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="Menu.cpp">
+    <ClCompile Include="Task1.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="MenuController.cpp">
+    <ClCompile Include="Task2.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="Task5.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="Task4.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="Task3.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>

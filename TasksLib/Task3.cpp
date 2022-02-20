@@ -1,3 +1,4 @@
+#include "pch.h"
 #include "Task3.h"
 
 void Task3::Run()
@@ -10,9 +11,9 @@ void Task3::Run()
 	std::getline(std::cin, str);
 	str = RemoveSpaces(str);
 
-	if((7 <= str.size() && str.size() <= 15) &
-	   (NumberOfSymbols(str, '.') == 3) & 
-	   !RepeatingInRow(str, '.') & 
+	if((7 <= str.size() && str.size() <= 15) &&
+	   (NumberOfSymbols(str, '.') == 3) && 
+	   !RepeatingInRow(str, '.') && 
 	   (str[0] != '.'))
 	{
 		std::string temp = "";
@@ -64,4 +65,22 @@ bool Task3::RepeatingInRow(std::string str, char chr)
 	}
 
 	return false;
+}
+
+std::string Task3::RemoveSpaces(std::string str)
+{
+	str.erase(std::remove(str.begin(), str.end(), ' '), str.end());
+	return str;
+}
+
+int Task3::NumberOfSymbols(const std::string str, const char chr)
+{
+	int k = 0;
+
+	for (int i = 0; i < str.length(); i++)
+	{
+		if (str[i] == chr) k++;
+	}
+
+	return k;
 }

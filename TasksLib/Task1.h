@@ -1,17 +1,28 @@
 #pragma once
-#include "BaseTask.h"
+#include <iostream>
+#include "ITask.h"
 
 /// <summary>
 /// Задача 1
 /// </summary>
-class Task1 : public BaseTask
+class Task1 : public ITask
 {
 public:
 
 	/// <summary>
-	/// Запуск
+	/// Конструктор
+	/// </summary>
+	Task1() = default;
+
+	/// <summary>
+	/// Запустить
 	/// </summary>
 	void Run() override;
+
+	/// <summary>
+	/// Деструктор
+	/// </summary>
+	virtual ~Task1() = default;
 
 private:
 
@@ -29,4 +40,3 @@ private:
 	/// <param name="position"> Позиция </param>
 	std::string DecryptCaesar(std::string text, size_t position);
 };
-

@@ -1,11 +1,19 @@
 #include "MenuController.h"
 #include "pch.h"
 
-MenuController::MenuController(std::vector<std::string> itemsMenu, std::function<void(std::string)> funcPrint)
-{
-    _sizeMenu = itemsMenu.size();
-    _funcPrint = std::move(funcPrint);
-	_menu = new Menu(itemsMenu);
+MenuController::MenuController(std::shared_ptr<IMenu> menu, std::function<void(std::string)> funcPrint)
+{    
+    _menu = menu;
+
+    if (_menu != nullptr)
+    {
+        _sizeMenu = _menu->GetSizeMenu();
+        _funcPrint = std::move(funcPrint);
+    }
+    else
+    {
+        throw "Error: menu = NULL!";
+    }   
 }
 
 int MenuController::SelectedMenuItem(const std::string text)
@@ -41,8 +49,8 @@ int MenuController::SelectedMenuItem(const std::string text)
 
 void MenuController::PrintMenu(int selection, const std::string text)
 {
-	system("cls");
-        
+    system("cls");
+
     _funcPrint(text);
 
     for (int i = 0; i < _sizeMenu; i++)
@@ -56,12 +64,4 @@ void MenuController::PrintMenu(int selection, const std::string text)
             _funcPrint(_menu->GetItemMenu(i));
         }
     }
-}
-
-MenuController::~MenuController()
-{
-	if (_menu != nullptr)
-	{
-		delete _menu;
-	}
 }

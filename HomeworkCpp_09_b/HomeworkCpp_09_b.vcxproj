@@ -139,24 +139,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="BaseTask.cpp" />
     <ClCompile Include="HomeWork.cpp" />
     <ClCompile Include="HomeworkCpp_09_b.cpp" />
-    <ClCompile Include="Task1.cpp" />
-    <ClCompile Include="Task2.cpp" />
-    <ClCompile Include="Task3.cpp" />
-    <ClCompile Include="Task4.cpp" />
-    <ClCompile Include="Task5.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="BaseTask.h" />
     <ClInclude Include="HomeWork.h" />
-    <ClInclude Include="Task1.h" />
-    <ClInclude Include="Task2.h" />
-    <ClInclude Include="Task3.h" />
-    <ClInclude Include="Task4.h" />
-    <ClInclude Include="Task5.h" />
-    <ClInclude Include="Tasks.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ConvertLib\ConvertLib.vcxproj">
@@ -164,6 +151,9 @@
     </ProjectReference>
     <ProjectReference Include="..\MenuLib\MenuLib.vcxproj">
       <Project>{61c0154d-fd97-4e42-a1a7-2a482764833b}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\TasksLib\TasksLib.vcxproj">
+      <Project>{90a7b7b4-a743-4379-b0d2-3b5a86f89597}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

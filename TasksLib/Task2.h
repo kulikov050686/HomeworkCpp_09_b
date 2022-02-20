@@ -1,19 +1,28 @@
 #pragma once
 #include <iostream>
 #include <string>
-#include "BaseTask.h"
 
 /// <summary>
 /// Задача 2
 /// </summary>
-class Task2 : public BaseTask
+class Task2 : public ITask 
 {
 public:
+	
+	/// <summary>
+	/// Конструктор
+	/// </summary>
+	Task2() = default;
 
 	/// <summary>
-	/// Запуск
+	/// Запустить
 	/// </summary>
 	void Run() override;
+
+	/// <summary>
+	/// Деструктор
+	/// </summary>
+	virtual ~Task2() = default;
 
 private:
 
@@ -35,5 +44,11 @@ private:
 	/// </summary>
 	/// <param name="chr"> Символ </param>	
 	bool ValidCharacterSecondPart(char chr);
-};
 
+	/// <summary>
+	/// Количество символов в строке
+	/// </summary>
+	/// <param name="str"> Строка </param>
+	/// <param name="chr"> Символ </param>	
+	int NumberOfSymbols(const std::string str, const char chr);
+};

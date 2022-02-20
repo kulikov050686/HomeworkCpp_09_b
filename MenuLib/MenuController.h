@@ -1,22 +1,23 @@
 #pragma once
-#include <iostream>
 #include <functional>
 #include <vector>
 #include <conio.h>
 #include <string>
+#include <memory>
 #include "Menu.h"
+#include "IMenuController.h"
 
 /// <summary>
 /// Класс контроллера меню
 /// </summary>
-class MenuController
+class MenuController : public IMenuController
 {
 private:
 
 	/// <summary>
-	/// Меню приложения
+	/// Меню
 	/// </summary>
-	Menu* _menu = nullptr;
+	std::shared_ptr<IMenu> _menu;
 		
 	/// <summary>
 	/// Количество пунктов меню
@@ -48,20 +49,20 @@ private:
 public:
 
 	/// <summary>
-	/// Создание нового контроллера меню
+	/// Конструктор
 	/// </summary>
-	/// <param name="itemsMenu"> Список названий пунктов меню </param>
-	/// <param name="funcPrint"> Функция отрисовки текста </param>
-	MenuController(std::vector<std::string> itemsMenu, std::function<void(std::string)> funcPrint);
+	/// <param name="menu"> Меню </param>
+	/// <param name="funcPrint"> Функция отображения пунктов меню </param>
+	MenuController(std::shared_ptr<IMenu> menu, std::function<void(std::string)> funcPrint);
 	
 	/// <summary>
 	/// Выбор пункта меню
 	/// </summary>
 	/// <param name="text"> Текст заголовка </param>	
-	int SelectedMenuItem(const std::string text);
+	int SelectedMenuItem(const std::string text) override;
 
 	/// <summary>
 	/// Деструктор
 	/// </summary>
-	~MenuController();
+	virtual ~MenuController() = default;
 };
