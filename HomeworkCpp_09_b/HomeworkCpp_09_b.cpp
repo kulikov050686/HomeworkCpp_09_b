@@ -25,16 +25,8 @@ std::shared_ptr<IMenuController> CreateMenu()
 		});
 }
 
-/// <summary>
-/// Создание задач
-/// </summary>
-std::shared_ptr<TasksLocator> CreateTasks()
-{
-	return std::make_shared<TasksLocator>();
-}
-
 int main()
 {
 	HomeWork* homework = new HomeWork();
-	homework->Run(CreateMenu(), CreateTasks());
+	homework->Run(CreateMenu(), std::make_shared<TasksLocator>());
 }
