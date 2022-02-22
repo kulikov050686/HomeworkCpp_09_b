@@ -16,7 +16,7 @@ std::shared_ptr<IMenuController> CreateMenu()
 									  "Task 2",
 									  "Task 3",
 									  "Task 4",
-									  "Task 5",									  
+									  "Task 5",
 									  "Exit" };
 
 	return std::make_shared<MenuController>(std::make_shared<Menu>(item), [](std::string text)

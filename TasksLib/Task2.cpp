@@ -21,7 +21,7 @@ void Task2::Run()
 		std::string secondPart;
 		bool key = true;
 
-		for (int i = 0; i < str.length(); i++)
+		for (size_t i = 0; i < str.length(); i++)
 		{
 			if (str[i] == '@')
 			{
@@ -44,14 +44,14 @@ void Task2::Run()
 		{
 			key = true;
 
-			for (int i = 0; i < firstPart.length() && key; i++)
+			for (size_t i = 0; i < firstPart.length() && key; i++)
 			{
 				key = key && ValidCharacterFirstPart(firstPart[i]);
 			}
 
 			if (key)
 			{
-				for (int i = 0; i < secondPart.length() && key; i++)
+				for (size_t i = 0; i < secondPart.length() && key; i++)
 				{
 					key = key && ValidCharacterSecondPart(secondPart[i]);
 				}
@@ -83,7 +83,7 @@ void Task2::Run()
 
 bool Task2::RepeatingInRow(std::string str, char chr)
 {
-	for (int i = 0; i < str.length() - 1; i++)
+	for (size_t i = 0; i < str.length() - 1; i++)
 	{
 		if (str[i] == chr && str[i + 1] == chr) return true;
 	}
@@ -137,7 +137,7 @@ int Task2::NumberOfSymbols(const std::string str, const char chr)
 {
 	int k = 0;
 
-	for (int i = 0; i < str.length(); i++)
+	for (size_t i = 0; i < str.length(); i++)
 	{
 		if (str[i] == chr) k++;
 	}

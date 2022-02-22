@@ -7,7 +7,7 @@ void HomeWork::Run(std::shared_ptr<IMenuController> menuController,
 	setlocale(LC_ALL, "Russian.utf8");
 
 	bool exit = false;
-	std::string text = "Выберите пункт меню";
+	std::string text = "Выберите пункт меню:";
 
 	while (!exit)
 	{

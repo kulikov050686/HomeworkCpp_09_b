@@ -16,6 +16,9 @@
     <Filter Include="Interfaces">
       <UniqueIdentifier>{5316d945-632f-4bff-af9f-ffc4a80d27c8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Enums">
+      <UniqueIdentifier>{68667ab5-92e6-4416-a063-a2be308de9dd}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -41,6 +44,9 @@
     </ClInclude>
     <ClInclude Include="ITask.h">
       <Filter>Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="ComparisonResultEnum.h">
+      <Filter>Enums</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

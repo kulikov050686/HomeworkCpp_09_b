@@ -8,7 +8,7 @@ void Task5::Run()
 
 	std::string str[3];
 
-	for (int i = 0; i < 3; i++)
+	for (size_t i = 0; i < 3; i++)
 	{
 		std::cout << "Введите " << i << " строку: ";
 		std::getline(std::cin, str[i]);
@@ -20,7 +20,7 @@ void Task5::Run()
 		int k = 0; // Общее количество крестиков
 		int p = 0; // Общее количество ноликов
 
-		for (int i = 0; i < 3; i++)
+		for (size_t i = 0; i < 3; i++)
 		{
 			k += NumberOfSymbols(str[i], 'X');
 			p += NumberOfSymbols(str[i], 'O');
@@ -68,7 +68,7 @@ bool Task5::CorrectInput(std::string str)
 
 	if (str.length() == 3)
 	{
-		for (int i = 0; i < str.length() && key; i++)
+		for (size_t i = 0; i < str.length() && key; i++)
 		{
 			key = key && AllowedSymbol(str[i]);
 		}
@@ -90,7 +90,7 @@ bool Task5::AllowedSymbol(char chr)
 
 bool Task5::Victory(const std::string* str, const char chr)
 {
-	for (int i = 0; i < 3; i++)
+	for (size_t i = 0; i < 3; i++)
 	{
 		if (str[i][0] == chr && str[i][1] == chr && str[i][2] == chr)
 		{
@@ -126,7 +126,7 @@ int Task5::NumberOfSymbols(const std::string str, const char chr)
 {
 	int k = 0;
 
-	for (int i = 0; i < str.length(); i++)
+	for (size_t i = 0; i < str.length(); i++)
 	{
 		if (str[i] == chr) k++;
 	}

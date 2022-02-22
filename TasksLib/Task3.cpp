@@ -11,7 +11,7 @@ void Task3::Run()
 	std::getline(std::cin, str);
 	str = RemoveSpaces(str);
 
-	if((7 <= str.size() && str.size() <= 15) &&
+	if((7 <= str.length() && str.length() <= 15) &&
 	   (NumberOfSymbols(str, '.') == 3) && 
 	   !RepeatingInRow(str, '.') && 
 	   (str[0] != '.'))
@@ -20,16 +20,16 @@ void Task3::Run()
 		bool key = true;
 		int k = 0;
 
-		for (size_t i = 0; i < str.size() && key; i++)
+		for (size_t i = 0; i < str.length() && key; i++)
 		{
 			if (str[i] != '.')
 			{
 				temp += str[i];
-				key = !(temp.size() > 3);				
+				key = !(temp.length() > 3);				
 			}
 			else
 			{
-				key = !(temp[0] == '0' && temp.size() > 1);
+				key = !(temp[0] == '0' && temp.length() > 1);
 
 				if (key)
 				{					
@@ -59,7 +59,7 @@ void Task3::Run()
 
 bool Task3::RepeatingInRow(std::string str, char chr)
 {
-	for (int i = 0; i < str.length() - 1; i++)
+	for (size_t i = 0; i < str.length() - 1; i++)
 	{
 		if (str[i] == chr && str[i + 1] == chr) return true;
 	}
@@ -77,7 +77,7 @@ int Task3::NumberOfSymbols(const std::string str, const char chr)
 {
 	int k = 0;
 
-	for (int i = 0; i < str.length(); i++)
+	for (size_t i = 0; i < str.length(); i++)
 	{
 		if (str[i] == chr) k++;
 	}

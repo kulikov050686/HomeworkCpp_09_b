@@ -11,9 +11,19 @@ class Task5 : public ITask
 public:
 
 	/// <summary>
+	/// Конструктор
+	/// </summary>
+	Task5() = default;
+
+	/// <summary>
 	/// Запуск
 	/// </summary>
 	void Run() override;
+
+	/// <summary>
+	/// Деструктор
+	/// </summary>
+	virtual ~Task5() = default;
 
 private:
 

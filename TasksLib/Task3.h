@@ -13,9 +13,19 @@ class Task3 : public ITask
 public:
 
 	/// <summary>
+	/// Конструктор
+	/// </summary>
+	Task3() = default;
+
+	/// <summary>
 	/// Запуск
 	/// </summary>
 	void Run() override;
+
+	/// <summary>
+	/// Деструктор
+	/// </summary>
+	virtual ~Task3() = default;
 
 private:
 
