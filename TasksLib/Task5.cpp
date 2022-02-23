@@ -26,7 +26,7 @@ void Task5::Run()
 			p += NumberOfSymbols(str[i], 'O');
 		}
 
-		if ((k == 3 && Victory(str, 'X') && p >= 4) || (p == 3 && Victory(str, 'O') && k >= 4))
+		if ((k == 3 && Victory(str, 'X') && p >= 3) || (p == 3 && Victory(str, 'O') && k >= 3))
 		{
 			std::cout << "Incorrect!!!" << std::endl;
 		}
