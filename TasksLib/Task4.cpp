@@ -76,11 +76,11 @@ ComparisonResultEnum Task4::ComparisonOfRealNumbers(std::string number1, std::st
 		return ComparisonResultEnum::FIRST;
 	}
 
-	auto result = ComparisonOfWholeParts(strIntegerPart1, strIntegerPart1);
+	auto result = ComparisonOfWholeParts(strIntegerPart1, strIntegerPart2);
 
 	if (result == ComparisonResultEnum::EQUALITY)
 	{
-
+		result = ComparisonOfFractionalParts(strFractionalPart1, strFractionalPart2);
 	}
 
 	return result;
@@ -263,7 +263,7 @@ std::string Task4::FractionalPartOfNumber(std::string number)
 	return temp;
 }
 
-ComparisonResultEnum Task4::ComparisonOfWholeParts(const std::string strIntegerPart1, const std::string strIntegerPart2)
+ComparisonResultEnum Task4::ComparisonOfWholeParts(std::string strIntegerPart1, std::string strIntegerPart2)
 {
 	if (((strIntegerPart1.length() > strIntegerPart2.length()) && (_minusSign1 == true && _minusSign2 == true)) ||
 		((strIntegerPart1.length() < strIntegerPart2.length()) && (_minusSign1 == false && _minusSign2 == false)))
@@ -295,9 +295,40 @@ ComparisonResultEnum Task4::ComparisonOfWholeParts(const std::string strIntegerP
 	return ComparisonResultEnum::EQUALITY;
 }
 
-ComparisonResultEnum Task4::ComparisonOfFractionalParts(const std::string strFractionalPart1, const std::string strFractionalPart2)
+ComparisonResultEnum Task4::ComparisonOfFractionalParts(std::string strFractionalPart1, std::string strFractionalPart2)
 {
+	size_t p1 = strFractionalPart1.length();
+	size_t p2 = strFractionalPart2.length();
+	size_t p = std::max(p1, p2);
 
+	if (p1 != p2)
+	{
+		if (p1 > p2)
+		{
+			size_t k = p1 - p2;
+			strFractionalPart2.insert(p2, k, '0');
+		}
+		else
+		{
+			size_t k = p2 - p1;
+			strFractionalPart1.insert(p1, k, '0');
+		}
+	}
+
+	for (size_t i = 0; i < p; i++)
+	{
+		if (((strFractionalPart1[i] > strFractionalPart2[i]) && (_minusSign1 == true && _minusSign2 == true)) || 
+			((strFractionalPart1[i] < strFractionalPart2[i]) && (_minusSign1 == false && _minusSign2 == false)))
+		{
+			return ComparisonResultEnum::SECOND;
+		}
+
+		if (((strFractionalPart1[i] > strFractionalPart2[i]) && (_minusSign1 == false && _minusSign2 == false)) ||
+			((strFractionalPart1[i] < strFractionalPart2[i]) && (_minusSign1 == true && _minusSign2 == true)))
+		{
+			return ComparisonResultEnum::FIRST;
+		}
+	}
 
 	return ComparisonResultEnum::EQUALITY;
 }

@@ -103,13 +103,12 @@ private:
 	/// </summary>
 	/// <param name="strIntegerPart1"> Целая часть первого числа </param>
 	/// <param name="strIntegerPart2"> Целая часть второго числа </param>	
-	ComparisonResultEnum ComparisonOfWholeParts(const std::string strIntegerPart1, const std::string strIntegerPart2);
+	ComparisonResultEnum ComparisonOfWholeParts(std::string strIntegerPart1, std::string strIntegerPart2);
 
 	/// <summary>
 	/// Сравнение дробных частей
 	/// </summary>
 	/// <param name="strFractionalPart1"> Дробная часть первого числа </param>
-	/// <param name="strFractionalPart2"> Дробная часть второго числа </param>
-	/// <returns></returns>
-	ComparisonResultEnum ComparisonOfFractionalParts(const std::string strFractionalPart1, const std::string strFractionalPart2);
+	/// <param name="strFractionalPart2"> Дробная часть второго числа </param>	
+	ComparisonResultEnum ComparisonOfFractionalParts(std::string strFractionalPart1, std::string strFractionalPart2);
 };
